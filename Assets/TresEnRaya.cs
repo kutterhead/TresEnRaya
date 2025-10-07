@@ -95,7 +95,7 @@ public class TresEnRaya : MonoBehaviour
             }
 
 
-
+        //columnas.
         for (int i = 0; i < 3; i++)
         {
 
@@ -105,14 +105,30 @@ public class TresEnRaya : MonoBehaviour
             {
 
                 Debug.Log("detectada linea vertical player: " + jugador12);
-                break;
+                return;
+                //break;
             }
 
 
 
         }
+        detectadaLinea = (celdasValor[0] == jugador12) && (celdasValor[4] == jugador12) && (celdasValor[8] == jugador12);
+        if (detectadaLinea)
+        {
+
+            Debug.Log("detectada primera diagonal player: " + jugador12);
 
 
+        }
+
+        detectadaLinea = (celdasValor[2] == jugador12) && (celdasValor[4] == jugador12) && (celdasValor[6] == jugador12);
+        if (detectadaLinea)
+        {
+
+            Debug.Log("detectada segunda diagonal player: " + jugador12);
+
+
+        }
 
 
 
